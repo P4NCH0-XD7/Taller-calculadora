@@ -1,14 +1,19 @@
-const { expect } = require("chai");
-const { sumar, restar } = require("../src/calculadora");
+import { expect } from 'chai';
+import { Calculadora } from '../../src/calculadora.js';
+import { describe, beforeEach, it } from 'mocha';
 
-describe("Calculadora", () => {
-
-    it("Debe sumar dos números", () => {
-        expect(sumar(2, 3)).to.equal(5);
+describe('Calculadora',() => {
+    let cal;
+    beforeEach(() => {
+        cal = new Calculadora();
     });
 
-    it("Debe restar dos números", () => {
-        expect(restar(5, 3)).to.equal(2);
+    it('Funcion sumar 2 + 2 ', () => {
+        expect(cal.suma(2, 2)).to.equal(4);
     });
 
-});
+    it('Funcion restar 4 - 2 ', () => {
+        expect(cal.res(4, 2)).to.equal(2);
+    });
+
+})
