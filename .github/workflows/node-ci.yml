@@ -32,4 +32,4 @@ jobs:
           npm install mocha chai --save-dev
       
       - run: npm install
-      - run: npm mocha
+      - run: npx mocha
