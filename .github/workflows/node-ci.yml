@@ -45,5 +45,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}:${{ github.sha }}
+          tags: ghcr.io/${{ github.repository | lower }}:${{ github.sha }}
           file: ./dockerfile
